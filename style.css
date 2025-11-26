@@ -10,14 +10,15 @@ body {
     box-sizing: border-box;
 }
 
-.bg-video {
+.bg-image {
     position: fixed;
     top: 0;
     left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    object-fit: cover; /* Ensures video scales without distortion */
-    z-index: -1; /* Send video behind content */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
 }
 
 main {
@@ -122,5 +123,22 @@ main {
 
     .title {
         font-size: 3px;
+    }
+}
+
+
+/* iPad en vertical */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (orientation: portrait) {
+    .wrapper {
+        width: 90%; /* o el ancho que quieras */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1366px) and (orientation: landscape) {
+    .wrapper{
+        width: 82%;
     }
 }
